@@ -53,7 +53,7 @@ console.log("Questo è l' array dei dati PRIMA di aver inserito una descrizione:
 for(var i = 0; i < students.length; i++) {
     var userDescription = prompt("Inserisci una descrizione per questo utente : " + students[i].name)
     students[i].description = userDescription;
-    registro.innerHTML += 'name' + ' : ' + students[i].name + "<br>" + 'surname' + ' : ' + students[i].surname + "<br>" + 'age' + ' : ' + students[i].age + "<br>" + 'description' + ' : ' + students[i].description + "<hr>";  
+    registro.innerHTML += 'Name : ' + students[i].name + "<br>" + 'Surname : ' + students[i].surname + "<br>" + 'Age : ' + students[i].age + "<br>" + 'Description : ' + students[i].description + "<hr>";  
 }
 
 console.log("Questo è l' array dei dati DOPO di aver inserito una descrizione: ", students);
