@@ -75,8 +75,7 @@ for (var i = 0; i < students.length; i++) {
     const {name, surname, age, description} = students[i]
 
     tableHTML.innerHTML +=
-    `
-    <ul>
+    ` <ul>
     <li>${name}</li>
     <li>${surname}</li>
     <li>${age}</li>
