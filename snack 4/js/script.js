@@ -59,7 +59,7 @@ for(var i = 0; i < students.length; i++) {
 var tableHTML = document.querySelector('.table-container');
 
 for (var i = 0; i < students.length; i++) {
-    var tableRow = '<ul>';  // una variabile "locale"
+  /*  var tableRow = '<ul>';  // una variabile "locale"
     var thisStudent = students[i];
 
     tableRow += '<li>' + thisStudent.name + '</li>';
@@ -69,5 +69,20 @@ for (var i = 0; i < students.length; i++) {
 
     tableRow += '</ul>';
     tableHTML.innerHTML += tableRow;
+    */
+
+   // in es6
+    const {name, surname, age, description} = students[i]
+
+    tableHTML.innerHTML +=
+    `
+    <ul>
+    <li>${name}</li>
+    <li>${surname}</li>
+    <li>${age}</li>
+    <li>${description}</li>
+    </ul>
+    `
+   
 }
 console.log("Questo è l' array dei dati DOPO di aver inserito una descrizione: ", students);
