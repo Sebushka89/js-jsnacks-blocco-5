@@ -32,19 +32,19 @@ var students = [
         name: "Sebastian",
         surname: "Rizzo",
         age: 32,
-        description: ""
+        //description: "" funziona lo stesso
     },
     {
         name: "Daniele",
         surname: "Bosca",
         age: 19,
-        description: ""
+        //description: ""
     },
     {
         name: "Andrea",
         surname: "Caratti",
         age: 24,
-        description: ""
+        //description: ""
     }
 ]
 
@@ -53,7 +53,21 @@ console.log("Questo è l' array dei dati PRIMA di aver inserito una descrizione:
 for(var i = 0; i < students.length; i++) {
     var userDescription = prompt("Inserisci una descrizione per questo utente : " + students[i].name)
     students[i].description = userDescription;
-    registro.innerHTML += 'Name : ' + students[i].name + "<br>" + 'Surname : ' + students[i].surname + "<br>" + 'Age : ' + students[i].age + "<br>" + 'Description : ' + students[i].description + "<hr>";  
+   // registro.innerHTML += 'Name : ' + students[i].name + "<br>" + 'Surname : ' + students[i].surname + "<br>" + 'Age : ' + students[i].age + "<br>" + 'Description : ' + students[i].description + "<hr>";  
 }
 
+var tableHTML = document.querySelector('.table-container');
+
+for (var i = 0; i < students.length; i++) {
+    var tableRow = '<ul>';  // una variabile "locale"
+    var thisStudent = students[i];
+
+    tableRow += '<li>' + thisStudent.name + '</li>';
+    tableRow += '<li>' + thisStudent.surname + '</li>';
+    tableRow += '<li>' + thisStudent.age + '</li>';
+    tableRow += '<li>' + thisStudent.description + '</li>';
+
+    tableRow += '</ul>';
+    tableHTML.innerHTML += tableRow;
+}
 console.log("Questo è l' array dei dati DOPO di aver inserito una descrizione: ", students);
